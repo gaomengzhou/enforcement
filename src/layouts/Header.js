@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
-import { formatMessage } from 'umi/locale';
-import { Layout, message } from 'antd';
-import Animate from 'rc-animate';
-import { connect } from 'dva';
-import router from 'umi/router';
 import GlobalHeader from '@/components/GlobalHeader';
 import TopNavHeader from '@/components/TopNavHeader';
+import { Layout, message } from 'antd';
+import { connect } from 'dva';
+import Animate from 'rc-animate';
+import React, { PureComponent } from 'react';
+import { formatMessage } from 'umi/locale';
+import router from 'umi/router';
 import styles from './Header.less';
 
 const { Header } = Layout;
@@ -120,7 +120,7 @@ class HeaderView extends PureComponent {
     const isTop = layout === 'topmenu';
     const width = this.getHeadWidth();
     const HeaderDom = visible ? (
-      <Header style={{ padding: 0, height:'100px' }} className={fixedHeader ? styles.fixedHeader : ''}>
+      <Header style={{ padding: 0, height: '100px' }} className={fixedHeader ? styles.fixedHeader : ''}>
         {isTop && !isMobile ? (
           <TopNavHeader
             theme={navTheme}
@@ -132,14 +132,14 @@ class HeaderView extends PureComponent {
             {...this.props}
           />
         ) : (
-          <GlobalHeader
-            onCollapse={handleMenuCollapse}
-            onNoticeClear={this.handleNoticeClear}
-            onMenuClick={this.handleMenuClick}
-            onNoticeVisibleChange={this.handleNoticeVisibleChange}
-            {...this.props}
-          />
-        )}
+            <GlobalHeader
+              onCollapse={handleMenuCollapse}
+              onNoticeClear={this.handleNoticeClear}
+              onMenuClick={this.handleMenuClick}
+              onNoticeVisibleChange={this.handleNoticeVisibleChange}
+              {...this.props}
+            />
+          )}
       </Header>
     ) : null;
     return (

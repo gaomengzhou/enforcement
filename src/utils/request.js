@@ -1,7 +1,7 @@
-import fetch from 'dva/fetch';
 import { notification } from 'antd';
-import router from 'umi/router';
+import fetch from 'dva/fetch';
 import hash from 'hash.js';
+import router from 'umi/router';
 import { isAntdPro } from './utils';
 
 const codeMessage = {
@@ -60,7 +60,7 @@ const cachedSave = (response, hashcode) => {
  * Requests a URL, returning a promise.
  *
  * @param  {string} url       The URL we want to request
- * @param  {object} [option] The options we want to pass to "fetch"
+ * @param  {object} [option]  The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, option) {
@@ -99,7 +99,7 @@ export default function request(url, option) {
       newOptions.headers = {
         Accept: 'application/json',
         // 'Content-Type': 'multipart/form-data; charset=utf-8',
-        'Access-Control-Allow-Origin':'http://192.168.3.147:8080',
+        'Access-Control-Allow-Origin': 'http://192.168.3.147:8080',
         ...newOptions.headers,
       };
     }
@@ -129,7 +129,7 @@ export default function request(url, option) {
       if (newOptions.method === 'DELETE' || response.status === 204) {
         return response.text();
       }
-      if(response.headers.get('content-type')==='application/vnd.ms-excel;charset=utf-8' || response.headers.get('content-type')==='application/octet-stream'){
+      if (response.headers.get('content-type') === 'application/vnd.ms-excel;charset=utf-8' || response.headers.get('content-type') === 'application/octet-stream') {
         return response
       }
       return response.json();

@@ -2,17 +2,16 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-nested-ternary */
 import os from 'os';
-import pageRoutes from './router.config';
-import webpackPlugin from './plugin.config';
 import defaultSettings from '../src/defaultSettings';
+import webpackPlugin from './plugin.config';
+import pageRoutes from './router.config';
 
-const ipAndPort =
-  process.env.environment == 'production'
-    ? 'http://58.213.107.106:28080'
-    : process.env.environment == 'test'
-      ? 'http://10.110.200.48:8080'
-      : 'http://192.168.3.147:8080'
-// : 'http://172.16.34.188:8080';
+const ipAndPort = 'http://58.213.107.106:28080'
+// process.env.environment == 'production'
+//   ? 'http://58.213.107.106:28080'
+//   : process.env.environment == 'test'
+//     ? 'http://10.110.200.48:8080'
+//     : 'http://192.168.3.147:8080'
 console.log('********当前所处环境:', ipAndPort, '***********');
 const plugins = [
   [
@@ -39,7 +38,6 @@ const plugins = [
             include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
             exclude: ['@babel/runtime', 'check-prettier'],
           },
-          hardSource: true,
         }
         : {}),
     },

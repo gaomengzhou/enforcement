@@ -1,0 +1,34 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+.fileList:after{
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.fileList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fileList li{
+  float: left;
+  width:49%;
+  margin-right: 2%;
+  padding: 0 10px 0 10px;
+  text-align: center;
+}
+.fileList li div{
+  height: 150px;
+}
+.fileList li p{
+  margin: 0;
+  padding: 6px 0;
+}
+.fileList li img{
+  width:100%;
+  height:100%;
+}
+.fileList li:nth-child(2n){
+  margin-right: 0;
+}

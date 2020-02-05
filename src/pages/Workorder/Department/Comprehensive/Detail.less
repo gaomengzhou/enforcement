@@ -1,0 +1,92 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+.fileList:after{
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.fileList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fileList li{
+  float: left;
+  width:50%;
+  //margin-right: 2%;
+  padding: 0 20px 0 20px;
+  text-align: center;
+  height:610px;
+}
+.fileList li:first-child{
+  background:#CECECE;
+}
+.fileList li .fileListWrap{
+  width: 100%;
+}
+.fileList li .fileListWrap div{
+  height: 150px;
+  padding: 20px;
+}
+.fileList li p{
+  margin: 0;
+  padding: 6px 0;
+}
+.fileList li img{
+  width:100%;
+  height:100%;
+}
+.fileList li:nth-child(2n){
+  margin-right: 0;
+}
+
+
+.circular{
+  // width: 15px;
+  // height: 15px;
+  // display: inline-block;     
+  // background-color:yellow;
+  // border-radius: 50%;      
+  // -moz-border-radius: 50%;     
+  // -webkit-border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  background: linear-gradient(0deg, rgba(255, 255, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  transform: rotate(45deg);
+  float: left;
+  margin-top: 3px
+}
+._circular{
+  // width: 15px;
+  // height: 15px;
+  // display: inline-block;     
+  // background-color:red;     
+  // border-radius: 50%;      
+  // -moz-border-radius: 50%;     
+  // -webkit-border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  background: linear-gradient(0deg, rgba(205, 0, 0, 1) 0%, rgba(255, 112, 112, 1) 100%);
+  line-height: 13px;
+  transform: rotate(45deg);
+  float: left;
+  margin-top: 3px
+}
+.circularG{
+  // width: 15px;
+  // height: 15px;
+  // display: inline-block;     
+  // background-color:green;     
+  // border-radius: 50%;      
+  // -moz-border-radius: 50%;     
+  // -webkit-border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  background: linear-gradient(0deg, rgba(20, 170, 0, 1) 0%, rgba(83, 255, 75, 1) 100%);
+  transform: rotate(45deg);
+  float: left;
+  margin-top: 3px
+}

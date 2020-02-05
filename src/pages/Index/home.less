@@ -1,0 +1,236 @@
+#home{
+  padding: 16px 0 0 30px;
+  background: transparent;
+  .header:after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+  .header .headerLeft,.header .headerRight{
+    float: left;
+  }
+  .header .headerLeft{
+    width:32%;
+    margin-right: 1%;
+  }
+
+  .header .headerLeft h3,.header .headerRight h3{
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 46px;
+    font-weight:bold;
+    font-size: 24px;
+    width:187px;
+    height:50px;
+    background:linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%);
+    border-radius:0 0 40px 0;
+    position: relative;
+  }
+  .headerLeftContentArrow{
+    position: relative;
+  }
+  .headerLeftContentArrow span{
+    position: absolute;
+    right:20px;
+    top:18px;
+    width:25px;
+    height:14px;
+    background: transparent url(../../../public/arrow.png);
+    background-size: cover;
+    cursor: pointer;
+  }
+  .header .headerLeft h3:before,
+  .header .headerRight h3:before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top:19px;
+    width:12px;
+    height:12px;
+    background: transparent url(../../../public/point.png);
+    background-size: cover;
+  }
+  .header .headerRight{
+    width:67%;
+  }
+  .headerLeftContent,.headerRightContent{
+    height: 500px;
+    background: #fff;
+    position: relative;
+    box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  .headerLeftContent:before,.headerRightContent:before{
+    content: '';
+    height:3px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:-3px;
+    background: -webkit-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* 标准的语法（必须放在最后） */
+  }
+  .headerRightContent{
+    .headerRightContentTable{
+      padding: 70px;
+    }
+    .ant-table .ant-table-thead > tr > th{
+      padding: 10px!important;
+    }
+  }
+  .headerInf{
+    padding: 30px 0px 0 10px;
+  }
+  .headerInf:after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+  .headerUser{
+    float: left;
+  }
+  .headerUserImg{
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height:100%;
+    }
+  }
+  .headerDetail{
+    float: left;
+    padding-left: 5px;
+    width: 180px;
+  }
+  .headerDetail>div{
+    line-height: 30px;
+    color: #333;
+  }
+  .workOrder{
+    padding: 10px;
+  }
+  .workOrder ul{
+    padding: 20px 0 0 0;
+    margin: 0;
+    border-top:1px dotted #000;
+  }
+  .workOrder ul li:nth-child(1),.workOrder ul li:nth-child(2) span:nth-child(1),
+  .workOrder ul li:nth-child(3) span:nth-child(1)
+  ,.workOrder ul li:nth-child(4) span:nth-child(1){
+    font-weight: bolder;
+  }
+  .workOrder ul li:after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+  .workOrder ul li span{
+    float: left;
+    width: 27%;
+    line-height: 40px;
+    text-align: center;
+    height:40px;
+    border-bottom: 1px solid #D2D2D2;
+  }
+  .workOrder ul li span:first-child{
+    width:19%;
+    border-bottom: 1px solid transparent;
+    text-align: left;
+  }
+  .workOrder ul li:nth-child(1) span{
+    background: #2C4AC6;
+    color: #fff;
+  }
+  .workOrder ul li:nth-child(1) span:first-child{
+    background: transparent;
+  }
+  .indexCenter{
+    margin-top: 24px;
+  }
+  .indexCenter:after,.indexCenter ul:after{
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+  .indexCenter>div{
+    float: left;
+    width:24.1%;
+    margin-right:1.2% ;
+    background: #fff;
+    padding: 10px 0 16px 0;
+    position: relative;
+    box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  .indexCenter>div:after{
+    content: '';
+    height:3px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:-3px;
+    background: -webkit-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* 标准的语法（必须放在最后） */
+  }
+  .indexCenter>div:last-child{
+    margin-right:0 ;
+  }
+  .indexCenter h3{
+    text-align: center;
+    font-size: 24px;
+    color: #566ED1;
+  }
+  .indexCenter ul{
+    margin-bottom: 0;
+  }
+  .indexCenter ul li{
+    float: left;
+    width:50%;
+    cursor: pointer;
+    text-align: center;
+  }
+  .indexCenter ul li>div:first-child{
+    font-size: 18px;
+    color:#666
+  }
+  .indexCenter ul li>div:last-child{
+    font-size: 50px;
+    color:#666;
+  }
+  .indexCenter ul li:first-child>div:last-child{
+    color:#4ED325;
+  }
+  .indexCenter ul li>span:last-child{
+    color:#1890FF;
+    margin-left: 10px;
+  }
+  .indexFooter{
+    margin-top: 24px;
+    box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  .indexFooter:after{
+    content: '';
+    height:3px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:-3px;
+    background: -webkit-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg,rgba(27,72,174,1) 0%,rgba(121,195,255,1) 100%); /* 标准的语法（必须放在最后） */
+  }
+  .ant-form-inline .ant-form-item{
+    width: 100%!important;
+  }
+}

@@ -1,0 +1,17 @@
+.guanjianzhibiao{
+  height: 440px;
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.guanjianzhibiao li{
+  float: left;
+  width: 16.6666%;
+}
+
+/* style={{ height: "100%", borderRight: "1px solid black" }} */
+.textspan{
+  height: 100%;
+  border-right: 1px solid black;
+}

@@ -1,0 +1,26 @@
+@import '~antd/lib/style/themes/default.less';
+
+.content {
+  margin: 0px;
+  padding-top: @layout-header-height;
+}
+.ant-layout{
+  //background: red!important;
+  padding: 0!important;
+}
+:global{
+  @media print {
+    #noprintSlideMenu{
+      display: none;
+    }
+    #noprintFooter{
+      display: none;
+    }
+    #noprintHeader{
+      display: none;
+    }
+    .noprint{
+      display: none;
+    }
+  }
+}

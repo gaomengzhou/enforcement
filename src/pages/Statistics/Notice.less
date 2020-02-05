@@ -1,0 +1,46 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+
+.nameWidth {
+  width: 16%;
+  display: inline-block;
+  margin-left: 6%;
+}
+
+.tableList {
+  :global {
+    table td {
+      word-wrap: break-word;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    table td:hover {
+      white-space: normal;
+      overflow: auto;
+    }
+  }
+}
+
+.statuLed {
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  background: linear-gradient(0deg, rgba(20, 170, 0, 1) 0%, rgba(83, 255, 75, 1) 100%);
+  transform: rotate(45deg);
+  float: left;
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
+.statuLedNo {
+  width: 13px;
+  height: 13px;
+  background: linear-gradient(0deg, rgba(205, 0, 0, 1) 0%, rgba(255, 112, 112, 1) 100%);
+  line-height: 13px;
+  transform: rotate(45deg);
+  float: left;
+  margin-top: 12px;
+  margin-left: 15px;
+}

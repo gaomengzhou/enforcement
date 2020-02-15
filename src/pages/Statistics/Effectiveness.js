@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/sort-comp */
 /* eslint-disable no-unused-vars */
-import React, { PureComponent } from 'react';
+import { Breadcrumb, Button, Col, DatePicker, Form, Modal, Row, Select } from 'antd';
 import { connect } from 'dva';
-import { Row, Col, Form, Select, Button, DatePicker, Breadcrumb, Modal } from 'antd';
 import moment from 'moment';
+import React, { PureComponent } from 'react';
 import styles from './Effectiveness.less';
 import range from './range';
 
@@ -469,105 +469,105 @@ class Effectiveness extends PureComponent {
         const that = this
 
         return (
-          <div id="listTitleContent">
-            <Breadcrumb separator=">">
-              <span id="breadcrumbIcon" />
-              <Breadcrumb.Item>统计分析</Breadcrumb.Item>
-              <Breadcrumb.Item>成效分析</Breadcrumb.Item>
-            </Breadcrumb>
-            <div id="tableForm">
-              <h3 id="listTitle" style={{ paddingBottom: 0 }}>成效分析</h3>
-            </div>
-            <div id='listTitleDetailTab'>
-              <div className={styles.newWorkOrderToday}>
-                <h6 className={styles.titleH6}>今日新增工单</h6>
-                <div style={{ width: '100%', height: 250, paddingLeft: '10%', paddingTop: '2%' }}>
-                  {
-                    sectoralStatistics ? (sectoralStatistics.map(item => (
-                      <p key={item.departType} style={{ fontSize: 20, float: 'left', width: '25%', fontWeight: 'bold' }}>{item.departType}:<span>{item.departNum}</span></p>
-                    ))) : []
-                 }
+            <div id="listTitleContent">
+                <Breadcrumb separator=">">
+                    <span id="breadcrumbIcon" />
+                    <Breadcrumb.Item>统计分析</Breadcrumb.Item>
+                    <Breadcrumb.Item>成效分析</Breadcrumb.Item>
+                </Breadcrumb>
+                <div id="tableForm">
+                    <h3 id="listTitle" style={{ paddingBottom: 0 }}>成效分析</h3>
                 </div>
-                {
-                    orderStatistics ? (orderStatistics.map(val => (
-                      <div key={val.departType} className={styles.workOrderBorder}>
-                        <div>
-                          <h5>{val.orderNum}</h5>
-                          <span>{val.departType}</span>
+                <div id='listTitleDetailTab'>
+                    <div className={styles.newWorkOrderToday}>
+                        <h6 className={styles.titleH6}>今日新增工单</h6>
+                        <div style={{ width: '100%', height: 250, paddingLeft: '10%', paddingTop: '2%' }}>
+                            {
+                                sectoralStatistics ? (sectoralStatistics.map(item => (
+                                    <p key={item.departType} style={{ fontSize: 20, float: 'left', width: '25%', fontWeight: 'bold' }}>{item.departType}:<span>{item.departNum}</span></p>
+                                ))) : []
+                            }
                         </div>
-                      </div>
-                    ))) : []
-                }
-                <Button style={{ marginLeft: '90%', marginBottom: '1%' }} type="primary" onClick={this.exportData}>导出</Button>
-              </div>
-              <Modal
-                title="导出excel表格"
-                visible={this.state.visibleExcel}
-                onOk={this.handleExcelOk.bind(this)}
-                onCancel={this.handleExcelCancel.bind(this)}
-              >
-                <p>请确定是否导出表格.</p>
-              </Modal>
-              <div className={styles.newWorkOrderToday}>
-                <h6 className={styles.titleH6}>工单处理数量</h6>
-                <div className={styles.numBorder}>
-                  <Form onSubmit={this.handleSubmit}>
-                    <Row>
-                      <Col span={6}>
-                        <span style={{ marginLeft: '2%' }}>部门选择: </span>
-                        <Select
-                          defaultValue="2"
-                          showSearch
-                          style={{ width: '50%' }}
-                          placeholder="选择社区"
-                          optionFilterProp="children"
-                          onChange={this.onChange}
-                          filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                        >
-                          <Option value='2'>社区</Option>
-                          <Option value='1'>科室</Option>
-                        </Select>
-                      </Col>
-                      <Col span={10}>
-                        <Form.Item>
-                          <span style={{ marginLeft: '5%' }}>时间区间: </span>
-                          {getFieldDecorator('timer', {
-                                initialValue: this.state.range || "",
-                            })(
-                              <RangePicker style={{ display: 'inlineBlock' }} onChange={this.handleDepDateChange} />
-                            )}
-                        </Form.Item>
-                      </Col>
-                      <Col span={8}>
-                        <Button type="primary" onClick={this.onCheck} style={{ marginLeft: '18%' }}>查询</Button>
-                      </Col>
-                    </Row>
-                  </Form>
+                        {
+                            orderStatistics ? (orderStatistics.map(val => (
+                                <div key={val.departType} className={styles.workOrderBorder}>
+                                    <div>
+                                        <h5>{val.orderNum}</h5>
+                                        <span>{val.departType}</span>
+                                    </div>
+                                </div>
+                            ))) : []
+                        }
+                        <Button style={{ marginLeft: '90%', marginBottom: '1%' }} type="primary" onClick={this.exportData}>导出</Button>
+                    </div>
+                    <Modal
+                        title="导出excel表格"
+                        visible={this.state.visibleExcel}
+                        onOk={this.handleExcelOk.bind(this)}
+                        onCancel={this.handleExcelCancel.bind(this)}
+                    >
+                        <p>请确定是否导出表格.</p>
+                    </Modal>
+                    <div className={styles.newWorkOrderToday}>
+                        <h6 className={styles.titleH6}>工单处理数量</h6>
+                        <div className={styles.numBorder}>
+                            <Form onSubmit={this.handleSubmit}>
+                                <Row>
+                                    <Col span={6}>
+                                        <span style={{ marginLeft: '2%' }}>部门选择: </span>
+                                        <Select
+                                            defaultValue="2"
+                                            showSearch
+                                            style={{ width: '50%' }}
+                                            placeholder="选择社区"
+                                            optionFilterProp="children"
+                                            onChange={this.onChange}
+                                            filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                        >
+                                            <Option value='2'>社区</Option>
+                                            <Option value='1'>科室</Option>
+                                        </Select>
+                                    </Col>
+                                    <Col span={10}>
+                                        <Form.Item>
+                                            <span style={{ marginLeft: '5%' }}>时间区间: </span>
+                                            {getFieldDecorator('timer', {
+                                                initialValue: this.state.range || "",
+                                            })(
+                                                <RangePicker style={{ display: 'inlineBlock' }} onChange={this.handleDepDateChange} />
+                                            )}
+                                        </Form.Item>
+                                    </Col>
+                                    <Col span={8}>
+                                        <Button type="primary" onClick={this.onCheck} style={{ marginLeft: '18%' }}>查询</Button>
+                                    </Col>
+                                </Row>
+                            </Form>
+                        </div>
+                        <div id="echarsLeft" style={{ height: 500, width: '60%', display: 'inline-block' }} />
+                        <div id="echarsRight" style={{ height: 500, width: '40%', display: 'inline-block' }} />
+                    </div>
+                    <div className={styles.newWorkOrderToday} style={{ marginBottom: '5%' }}>
+                        <h6 className={styles.titleH6}>工单处理效率</h6>
+                        <div className={styles.numBorder}>
+                            <Form.Item>
+                                <span style={{ marginLeft: '5%' }}>时间区间: </span>
+                                {getFieldDecorator('timer2', {
+                                    initialValue: this.state.range || "",
+                                })(
+                                    <RangePicker style={{ display: 'inlineBlock' }} onChange={this.handleDepDateChange2} />
+                                )}
+                                <Button onClick={this.onCheck2} type="primary" style={{ marginLeft: '42.4%' }}>查询</Button>
+                            </Form.Item>
+                        </div>
+                        <div>
+                            <div id="echart3" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
+                            <div id="echart4" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
+                            <div id="echart5" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
+                        </div>
+                    </div>
                 </div>
-                <div id="echarsLeft" style={{ height: 500, width: '60%', display: 'inline-block' }} />
-                <div id="echarsRight" style={{ height: 500, width: '40%', display: 'inline-block' }} />
-              </div>
-              <div className={styles.newWorkOrderToday} style={{ marginBottom: '5%' }}>
-                <h6 className={styles.titleH6}>工单处理效率</h6>
-                <div className={styles.numBorder}>
-                  <Form.Item>
-                    <span style={{ marginLeft: '5%' }}>时间区间: </span>
-                    {getFieldDecorator('timer2', {
-                        initialValue: this.state.range || "",
-                    })(
-                      <RangePicker style={{ display: 'inlineBlock' }} onChange={this.handleDepDateChange2} />
-                    )}
-                    <Button onClick={this.onCheck2} type="primary" style={{ marginLeft: '42.4%' }}>查询</Button>
-                  </Form.Item>
-                </div>
-                <div>
-                  <div id="echart3" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
-                  <div id="echart4" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
-                  <div id="echart5" style={{ display: 'inline-block', height: 500, width: '33.333%' }} />
-                </div>
-              </div>
             </div>
-          </div>
         )
     }
 }

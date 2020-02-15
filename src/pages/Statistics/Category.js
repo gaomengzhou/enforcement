@@ -9,11 +9,11 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unused-state */
-import React, { PureComponent } from 'react';
-import { Tabs, Row, Col, Button, Select, DatePicker, Form, Breadcrumb } from 'antd';
-import echarts from 'echarts';
+import { Breadcrumb, Button, Col, DatePicker, Form, Row, Select, Tabs } from 'antd';
 import { connect } from 'dva/index';
+import echarts from 'echarts';
 import moment from 'moment/moment';
+import React, { PureComponent } from 'react';
 import range from './range';
 
 const { RangePicker } = DatePicker;
@@ -213,7 +213,7 @@ class Home extends PureComponent {
 
     // 案件小类
     if (value) {
-      const {parentId} = this.state.listbigAllClass.filter(i => i.code == value)[0];
+      const { parentId } = this.state.listbigAllClass.filter(i => i.code == value)[0];
       new Promise(resolve => {
         this.props.dispatch({
           type: 'inspectors/smallClassFetch',
@@ -965,8 +965,8 @@ class Home extends PureComponent {
         <div id="tableForm">
           <h3 id="listTitle" style={{ paddingBottom: 20 }}>类别分析</h3>
         </div>
-        <div id="listTitleDetailTab" style={{boxShadow:'0 2px 6px 0 rgba(0, 0, 0, 0.3)', background:'#fff',marginBottom:'5%'}}>
-          <div style={{ borderRadius: '25px 0 0 0', marginTop: '16px', marginBottom: '-20px' ,boxShadow:'0 2px 6px 0 rgba(0, 0, 0, 0.3)'}}>
+        <div id="listTitleDetailTab" style={{ boxShadow: '0 2px 6px 0 rgba(0, 0, 0, 0.3)', background: '#fff', marginBottom: '5%' }}>
+          <div style={{ borderRadius: '25px 0 0 0', marginTop: '16px', marginBottom: '-20px', boxShadow: '0 2px 6px 0 rgba(0, 0, 0, 0.3)' }}>
             <Tabs defaultActiveKey="1" tabBarGutter={0} onChange={this.callback.bind(this)} type="card">
               <TabPane tab="综合执法" key="1" />
               <TabPane tab="城管工单" key="2" />
